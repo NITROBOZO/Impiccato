@@ -5,10 +5,13 @@ public class Impiccato {
 	private StringBuilder parolaAttuale;
 	private int tentativiRimanenti;
 	
-	public Impiccato(String parolaSegreta) {
+	public Impiccato() {
+		this.tentativiRimanenti = 6; // Numero di tentativi iniziali
+	}
+	
+	public void setParolaSegreta(String parolaSegreta) {
 		this.parolaSegreta = parolaSegreta;
 		this.parolaAttuale = new StringBuilder("_".repeat(parolaSegreta.length()));
-		this.tentativiRimanenti = 6; // Numero di tentativi iniziali
 	}
 	
 	public String getParolaAttuale() {

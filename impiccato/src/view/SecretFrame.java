@@ -9,33 +9,25 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class SecretFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					SecretFrame frame = new SecretFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	private JTextField fieldParolaSegreta;
+	private JButton btnConfirm = new JButton("OK");
+	private JLabel lblNewLabel = new JLabel("Inserisci la parola segreta");
+	public JTextField getFieldParolaSegreta() {
+		return fieldParolaSegreta;
+	}
+	public JButton getBtnConfirm() {
+		return btnConfirm;
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public SecretFrame() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 206, 189);
 		contentPane = new JPanel();
@@ -44,17 +36,16 @@ public class SecretFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(50, 60, 96, 19);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		fieldParolaSegreta = new JTextField();
+		fieldParolaSegreta.setBounds(50, 60, 96, 19);
+		contentPane.add(fieldParolaSegreta);
+		fieldParolaSegreta.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Inserisci la parola segreta");
-		lblNewLabel.setBounds(40, 37, 142, 13);
+		
+		lblNewLabel.setBounds(28, 36, 172, 13);
 		contentPane.add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("OK");
-		btnNewButton.setBounds(60, 89, 85, 21);
-		contentPane.add(btnNewButton);
+		btnConfirm.setBounds(55, 90, 85, 21);
+		contentPane.add(btnConfirm);
 	}
 }
