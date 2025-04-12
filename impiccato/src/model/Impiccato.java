@@ -1,0 +1,43 @@
+package model;
+
+public class Impiccato {
+	private String parolaSegreta;
+	private StringBuilder parolaAttuale;
+	private int tentativiRimanenti;
+	
+	public Impiccato(String parolaSegreta) {
+		this.parolaSegreta = parolaSegreta;
+		this.parolaAttuale = new StringBuilder("_".repeat(parolaSegreta.length()));
+		this.tentativiRimanenti = 6; // Numero di tentativi iniziali
+	}
+	
+	public String getParolaAttuale() {
+		return parolaAttuale.toString();
+	}
+	
+	public int getTentativiRimanenti() {
+		return tentativiRimanenti;
+	}
+	
+	public boolean verificaLettera(char lettera) {
+		boolean letteraTrovata = false;
+		
+		for (int i = 0; i < parolaSegreta.length(); i++) {
+			if (parolaSegreta.charAt(i) == lettera) {
+				parolaAttuale.setCharAt(i, lettera);
+				letteraTrovata = true;
+			}
+		}
+		
+		if (!letteraTrovata) {
+			tentativiRimanenti--;
+		}
+		
+		return letteraTrovata;
+	}
+	
+	public boolean isGiocoFinito() {
+		return tentativiRimanenti <= 0 || parolaAttuale.toString().equals(parolaSegreta);
+	}
+	
+}
