@@ -40,6 +40,7 @@ public class Controller implements ActionListener{
 			frameImpiccato.getFieldParola().setEditable(false);
 			frameImpiccato.getBtnConferma().setEnabled(false);
 		}
+		frameImpiccato.getFieldParola().setText("");
 		
 	}
 	public Controller() {
