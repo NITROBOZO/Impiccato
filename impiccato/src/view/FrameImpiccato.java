@@ -20,8 +20,20 @@ public class FrameImpiccato extends JFrame {
 	private JLabel labelTentativi = new JLabel("Errori rimasti: 6");
 	private JButton btnConferma = new JButton("Conferma");
 	private JLabel labelParolaAttuale = new JLabel("");
-	private JLabel lblVittoria = new JLabel("");;
+	private JLabel lblVittoria = new JLabel("");
+	private String alfabeto = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+	private final JLabel lblAlfabeto = new JLabel("<html>"+alfabeto+"</html>");
 	
+	
+
+	public String getAlfabeto() {
+		return alfabeto;
+	}
+
+	public void setAlfabeto(String alfabeto) {
+		this.alfabeto = alfabeto;
+	}
+
 	public JLabel getLabelParolaAttuale() {
 		return labelParolaAttuale;
 	}
@@ -68,6 +80,10 @@ public class FrameImpiccato extends JFrame {
 	public void setLabelTentativi(int n) {
 		labelTentativi.setText("Errori rimasti: " + n);
 	}
+
+	public void updateAlfabeto() {
+		lblAlfabeto.setText("<html>" + alfabeto + "</html>");
+	}
 	public FrameImpiccato() {
 		setTitle("Impiccato");
 		setResizable(false);
@@ -91,6 +107,7 @@ public class FrameImpiccato extends JFrame {
 		
 		labelTentativi.setBounds(50, 11, 106, 14);
 		contentPane.add(labelTentativi);
+		lblAlfabeto.setVerticalAlignment(JLabel.TOP);
 		
 		labelImmagine = new JLabel("");
 		ImageIcon icon = new ImageIcon(getClass().getResource("6.jpg"));
@@ -107,8 +124,16 @@ public class FrameImpiccato extends JFrame {
 		contentPane.add(labelParolaAttuale);
 		
 		
-		lblVittoria.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblVittoria.setBounds(302, 158, 34, 40);
+		lblVittoria.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblVittoria.setBounds(182, 158, 243, 30);
+		lblVittoria.setHorizontalAlignment(JLabel.CENTER);
 		contentPane.add(lblVittoria);
+		
+		JLabel lblLettere = new JLabel("Lettere");
+		lblLettere.setBounds(293, 187, 43, 14);
+		contentPane.add(lblLettere);
+		lblAlfabeto.setBounds(272, 209, 89, 46);
+		
+		contentPane.add(lblAlfabeto);
 	}
 }

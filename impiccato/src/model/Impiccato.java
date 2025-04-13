@@ -10,12 +10,12 @@ public class Impiccato {
 	}
 	
 	public void setParolaSegreta(String parolaSegreta) {
-		this.parolaSegreta = parolaSegreta;
+		this.parolaSegreta = parolaSegreta.toUpperCase();
 		this.parolaAttuale = new StringBuilder("_".repeat(parolaSegreta.length()));
 	}
 	
 	public String getParolaAttuale() {
-		return parolaAttuale.toString();
+		return parolaAttuale.toString().toUpperCase();
 	}
 	
 	public int getTentativiRimanenti() {
@@ -32,7 +32,7 @@ public class Impiccato {
 			}
 		}
 		
-		if (!letteraTrovata) {
+		if (!letteraTrovata && tentativiRimanenti > 0) {
 			tentativiRimanenti--;
 		}
 		
