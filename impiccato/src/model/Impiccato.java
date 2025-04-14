@@ -6,7 +6,7 @@ public class Impiccato {
 	private int tentativiRimanenti;
 	
 	public Impiccato() {
-		this.tentativiRimanenti = 6; // Numero di tentativi iniziali
+		this.tentativiRimanenti = 6; // Numero di tentativi
 	}
 	
 	public void setParolaSegreta(String parolaSegreta) {
