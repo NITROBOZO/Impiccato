@@ -13,7 +13,7 @@ public class Main {
 		
 		
 
-		System.out.println("Avvio del gioco dell'Impiccato!");
+		System.out.println("Gioco avviato");
 		
 	}
 }
