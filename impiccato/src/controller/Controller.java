@@ -19,6 +19,9 @@ public class Controller implements ActionListener{
 		else if(e.getSource() == frameImpiccato.getBtnConferma() || e.getSource() == frameImpiccato.getFieldParola()) {
 			if(impiccato.verificaLettera(frameImpiccato.getFieldParola().getText().toUpperCase().charAt(0))) {
 				frameImpiccato.setLabelParolaAttuale(impiccato.getParolaAttuale());
+				String str = frameImpiccato.getAlfabeto().replace(String.valueOf(frameImpiccato.getFieldParola().getText().toUpperCase().charAt(0)), "<s>"+frameImpiccato.getFieldParola().getText().toUpperCase().charAt(0)+"</s>");
+				frameImpiccato.setAlfabeto(str);
+				frameImpiccato.updateAlfabeto();
 			}
 			else {
 				frameImpiccato.setLabelTentativi(impiccato.getTentativiRimanenti());

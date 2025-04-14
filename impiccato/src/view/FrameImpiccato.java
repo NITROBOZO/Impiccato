@@ -88,7 +88,7 @@ public class FrameImpiccato extends JFrame {
 		setTitle("Impiccato");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 328);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -112,7 +112,7 @@ public class FrameImpiccato extends JFrame {
 		labelImmagine = new JLabel("");
 		ImageIcon icon = new ImageIcon(getClass().getResource("6.jpg"));
 		labelImmagine.setIcon(icon);
-		labelImmagine.setBounds(24, 36, 148, 191);
+		labelImmagine.setBounds(24, 36, 148, 210);
 		contentPane.add(labelImmagine);
 		
 		
@@ -120,7 +120,7 @@ public class FrameImpiccato extends JFrame {
 		contentPane.add(btnConferma);
 		
 		
-		labelParolaAttuale.setBounds(50, 238, 106, 14);
+		labelParolaAttuale.setBounds(50, 256, 106, 14);
 		contentPane.add(labelParolaAttuale);
 		
 		
@@ -132,7 +132,7 @@ public class FrameImpiccato extends JFrame {
 		JLabel lblLettere = new JLabel("Lettere");
 		lblLettere.setBounds(272, 195, 43, 14);
 		contentPane.add(lblLettere);
-		lblAlfabeto.setBounds(272, 209, 89, 46);
+		lblAlfabeto.setBounds(272, 209, 89, 72);
 		
 		contentPane.add(lblAlfabeto);
 	}
