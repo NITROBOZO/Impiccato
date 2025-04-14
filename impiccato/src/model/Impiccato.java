@@ -14,6 +14,11 @@ public class Impiccato {
 		this.parolaAttuale = new StringBuilder("_".repeat(parolaSegreta.length()));
 	}
 	
+	
+	public String getParolaSegreta() {
+		return parolaSegreta;
+	}
+
 	public String getParolaAttuale() {
 		return parolaAttuale.toString().toUpperCase();
 	}

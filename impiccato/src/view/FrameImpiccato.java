@@ -125,12 +125,12 @@ public class FrameImpiccato extends JFrame {
 		
 		
 		lblVittoria.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblVittoria.setBounds(182, 158, 243, 30);
+		lblVittoria.setBounds(182, 158, 243, 39);
 		lblVittoria.setHorizontalAlignment(JLabel.CENTER);
 		contentPane.add(lblVittoria);
 		
 		JLabel lblLettere = new JLabel("Lettere");
-		lblLettere.setBounds(293, 187, 43, 14);
+		lblLettere.setBounds(272, 195, 43, 14);
 		contentPane.add(lblLettere);
 		lblAlfabeto.setBounds(272, 209, 89, 46);
 		

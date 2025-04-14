@@ -31,7 +31,7 @@ public class Controller implements ActionListener{
 		}
 		if(impiccato.isGiocoFinito()) {
 			if (impiccato.getTentativiRimanenti() <= 0) {
-				frameImpiccato.setLabelVittoria("<html>hai perso!</br> la parola era: " + "impiccato.getParolaAttuale()</html>");
+				frameImpiccato.setLabelVittoria("<html>hai perso!<br> la parola era: " + impiccato.getParolaSegreta()+"</html>");
 				
 			} else {
 				frameImpiccato.setLabelVittoria("<html>GG<br> hai vinto!</html>");
