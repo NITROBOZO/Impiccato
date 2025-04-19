@@ -120,7 +120,8 @@ public class FrameImpiccato extends JFrame {
 		contentPane.add(btnConferma);
 		
 		
-		labelParolaAttuale.setBounds(50, 256, 106, 14);
+		labelParolaAttuale.setBounds(10, 256, 188, 22);
+		labelParolaAttuale.setHorizontalAlignment(JLabel.CENTER);
 		contentPane.add(labelParolaAttuale);
 		
 		
