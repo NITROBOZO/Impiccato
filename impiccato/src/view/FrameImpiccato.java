@@ -88,7 +88,7 @@ public class FrameImpiccato extends JFrame {
 		setTitle("Impiccato");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 328);
+		setBounds(100, 100, 450, 376);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -120,7 +120,7 @@ public class FrameImpiccato extends JFrame {
 		contentPane.add(btnConferma);
 		
 		
-		labelParolaAttuale.setBounds(10, 256, 188, 22);
+		labelParolaAttuale.setBounds(10, 256, 188, 73);
 		labelParolaAttuale.setHorizontalAlignment(JLabel.CENTER);
 		contentPane.add(labelParolaAttuale);
 		
